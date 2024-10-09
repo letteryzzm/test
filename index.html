@@ -1,0 +1,29 @@
+<!-- AI助手部分 -->
+<section id="ai-assistant-intro">
+    <h2>AI助手</h2>
+    <p>开始与我的AI助手对话，探索更多可能性！</p>
+    <button @click="openAIAssistant" class="cta-button">
+        <i class="fas fa-robot"></i> 开始对话
+    </button>
+</section>
+
+<!-- 联系我部分 -->
+<section id="contact">
+    <h2>联系我</h2>
+    <div class="contact-container">
+        <form @submit.prevent="submitForm">
+            <input v-model="contactForm.name" type="text" placeholder="您的姓名" required>
+            <input v-model="contactForm.email" type="email" placeholder="您的邮箱" required>
+            <textarea v-model="contactForm.message" placeholder="您的消息" required></textarea>
+            <button type="submit" class="cta-button">
+                <i class="fas fa-paper-plane"></i> 发送
+            </button>
+        </form>
+        <div class="contact-info">
+            <h3>联系方式</h3>
+            <p><i class="fas fa-envelope"></i> Email: your.email@example.com</p>
+            <p><i class="fas fa-phone"></i> 电话: +86 123 4567 8900</p>
+            <p><i class="fas fa-map-marker-alt"></i> 地址: 您的地址</p>
+        </div>
+    </div>
+</section>
